@@ -1,0 +1,778 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Philosopher:wght@400;700&display=swap");
+
+// font
+$Philosopher: "Philosopher", sans-serif;
+
+// color
+$primary-color: #332914;
+$color-black: rgb(0 0 0);
+$color-white: rgb(255 255 255);
+$color-slate-50: rgb(248 250 252);
+$color-slate-100: rgb(241 245 249);
+$color-slate-200: rgb(226 232 240);
+$color-slate-300: rgb(203 213 225);
+$color-slate-400: rgb(148 163 184);
+$color-slate-500: rgb(100 116 139);
+$color-slate-600: rgb(71 85 105);
+$color-slate-700: rgb(51 65 85);
+$color-slate-800: rgb(30 41 59);
+$color-slate-900: rgb(15 23 42);
+$color-gray-50: rgb(249 250 251);
+$color-gray-100: rgb(243 244 246);
+$color-gray-200: rgb(229 231 235);
+$color-gray-300: rgb(209 213 219);
+$color-gray-400: rgb(156 163 175);
+$color-gray-500: rgb(107 114 128);
+$color-gray-600: rgb(75 85 99);
+$color-gray-700: rgb(55 65 81);
+$color-gray-800: rgb(31 41 55);
+$color-gray-900: rgb(17 24 39);
+$color-zinc-50: rgb(250 250 250);
+$color-zinc-100: rgb(244 244 245);
+$color-zinc-200: rgb(228 228 231);
+$color-zinc-300: rgb(212 212 216);
+$color-zinc-400: rgb(161 161 170);
+$color-zinc-500: rgb(113 113 122);
+$color-zinc-600: rgb(82 82 91);
+$color-zinc-700: rgb(63 63 70);
+$color-zinc-800: rgb(39 39 42);
+$color-zinc-900: rgb(24 24 27);
+$color-neutral-50: rgb(250 250 250);
+$color-neutral-100: rgb(245 245 245);
+$color-neutral-200: rgb(229 229 229);
+$color-neutral-300: rgb(212 212 212);
+$color-neutral-400: rgb(163 163 163);
+$color-neutral-500: rgb(115 115 115);
+$color-neutral-600: rgb(82 82 82);
+$color-neutral-700: rgb(64 64 64);
+$color-neutral-800: rgb(38 38 38);
+$color-neutral-900: rgb(23 23 23);
+$color-stone-50: rgb(250 250 249);
+$color-stone-100: rgb(245 245 244);
+$color-stone-200: rgb(231 229 228);
+$color-stone-300: rgb(214 211 209);
+$color-stone-400: rgb(168 162 158);
+$color-stone-500: rgb(120 113 108);
+$color-stone-600: rgb(87 83 78);
+$color-stone-700: rgb(68 64 60);
+$color-stone-800: rgb(41 37 36);
+$color-stone-900: rgb(28 25 23);
+$color-red-50: rgb(254 242 242);
+$color-red-100: rgb(254 226 226);
+$color-red-200: rgb(254 202 202);
+$color-red-300: rgb(252 165 165);
+$color-red-400: rgb(248 113 113);
+$color-red-500: rgb(239 68 68);
+$color-red-600: rgb(220 38 38);
+$color-red-700: rgb(185 28 28);
+$color-red-800: rgb(153 27 27);
+$color-red-900: rgb(127 29 29);
+$color-orange-50: rgb(255 247 237);
+$color-orange-100: rgb(255 237 213);
+$color-orange-200: rgb(254 215 170);
+$color-orange-300: rgb(253 186 116);
+$color-orange-400: rgb(251 146 60);
+$color-orange-500: rgb(249 115 22);
+$color-orange-600: rgb(234 88 12);
+$color-orange-700: rgb(194 65 12);
+$color-orange-800: rgb(154 52 18);
+$color-orange-900: rgb(124 45 18);
+$color-amber-50: rgb(255 251 235);
+$color-amber-100: rgb(254 243 199);
+$color-amber-200: rgb(253 230 138);
+$color-amber-300: rgb(252 211 77);
+$color-amber-400: rgb(251 191 36);
+$color-amber-500: rgb(245 158 11);
+$color-amber-600: rgb(217 119 6);
+$color-amber-700: rgb(180 83 9);
+$color-amber-800: rgb(146 64 14);
+$color-amber-900: rgb(120 53 15);
+$color-yellow-50: rgb(254 252 232);
+$color-yellow-100: rgb(254 249 195);
+$color-yellow-200: rgb(254 240 138);
+$color-yellow-300: rgb(253 224 71);
+$color-yellow-400: rgb(250 204 21);
+$color-yellow-500: rgb(234 179 8);
+$color-yellow-600: rgb(202 138 4);
+$color-yellow-700: rgb(161 98 7);
+$color-yellow-800: rgb(133 77 14);
+$color-yellow-900: rgb(113 63 18);
+$color-lime-50: rgb(247 254 231);
+$color-lime-100: rgb(236 252 203);
+$color-lime-200: rgb(217 249 157);
+$color-lime-300: rgb(190 242 100);
+$color-lime-400: rgb(163 230 53);
+$color-lime-500: rgb(132 204 22);
+$color-lime-600: rgb(101 163 13);
+$color-lime-700: rgb(77 124 15);
+$color-lime-800: rgb(63 98 18);
+$color-lime-900: rgb(54 83 20);
+$color-green-50: rgb(240 253 244);
+$color-green-100: rgb(220 252 231);
+$color-green-200: rgb(187 247 208);
+$color-green-300: rgb(134 239 172);
+$color-green-400: rgb(74 222 128);
+$color-green-500: rgb(34 197 94);
+$color-green-600: rgb(22 163 74);
+$color-green-700: rgb(21 128 61);
+$color-green-800: rgb(22 101 52);
+$color-green-900: rgb(20 83 45);
+$color-emerald-50: rgb(236 253 245);
+$color-emerald-100: rgb(209 250 229);
+$color-emerald-200: rgb(167 243 208);
+$color-emerald-300: rgb(110 231 183);
+$color-emerald-400: rgb(52 211 153);
+$color-emerald-500: rgb(16 185 129);
+$color-emerald-600: rgb(5 150 105);
+$color-emerald-700: rgb(4 120 87);
+$color-emerald-800: rgb(6 95 70);
+$color-emerald-900: rgb(6 78 59);
+$color-teal-50: rgb(240 253 250);
+$color-teal-100: rgb(204 251 241);
+$color-teal-200: rgb(153 246 228);
+$color-teal-300: rgb(94 234 212);
+$color-teal-400: rgb(45 212 191);
+$color-teal-500: rgb(20 184 166);
+$color-teal-600: rgb(13 148 136);
+$color-teal-700: rgb(15 118 110);
+$color-teal-800: rgb(17 94 89);
+$color-teal-900: rgb(19 78 74);
+$color-cyan-50: rgb(236 254 255);
+$color-cyan-100: rgb(207 250 254);
+$color-cyan-200: rgb(165 243 252);
+$color-cyan-300: rgb(103 232 249);
+$color-cyan-400: rgb(34 211 238);
+$color-cyan-500: rgb(6 182 212);
+$color-cyan-600: rgb(8 145 178);
+$color-cyan-700: rgb(14 116 144);
+$color-cyan-800: rgb(21 94 117);
+$color-cyan-900: rgb(22 78 99);
+$color-sky-50: rgb(240 249 255);
+$color-sky-100: rgb(224 242 254);
+$color-sky-200: rgb(186 230 253);
+$color-sky-300: rgb(125 211 252);
+$color-sky-400: rgb(56 189 248);
+$color-sky-500: rgb(14 165 233);
+$color-sky-600: rgb(2 132 199);
+$color-sky-700: rgb(3 105 161);
+$color-sky-800: rgb(7 89 133);
+$color-sky-900: rgb(12 74 110);
+$color-blue-50: rgb(239 246 255);
+$color-blue-100: rgb(219 234 254);
+$color-blue-200: rgb(191 219 254);
+$color-blue-300: rgb(147 197 253);
+$color-blue-400: rgb(96 165 250);
+$color-blue-500: rgb(59 130 246);
+$color-blue-600: rgb(37 99 235);
+$color-blue-700: rgb(29 78 216);
+$color-blue-800: rgb(30 64 175);
+$color-blue-900: rgb(30 58 138);
+$color-indigo-50: rgb(238 242 255);
+$color-indigo-100: rgb(224 231 255);
+$color-indigo-200: rgb(199 210 254);
+$color-indigo-300: rgb(165 180 252);
+$color-indigo-400: rgb(129 140 248);
+$color-indigo-500: rgb(99 102 241);
+$color-indigo-600: rgb(79 70 229);
+$color-indigo-700: rgb(67 56 202);
+$color-indigo-800: rgb(55 48 163);
+$color-indigo-900: rgb(49 46 129);
+$color-violet-50: rgb(245 243 255);
+$color-violet-100: rgb(237 233 254);
+$color-violet-200: rgb(221 214 254);
+$color-violet-300: rgb(196 181 253);
+$color-violet-400: rgb(167 139 250);
+$color-violet-500: rgb(139 92 246);
+$color-violet-600: rgb(124 58 237);
+$color-violet-700: rgb(109 40 217);
+$color-violet-800: rgb(91 33 182);
+$color-violet-900: rgb(76 29 149);
+$color-purple-50: rgb(250 245 255);
+$color-purple-100: rgb(243 232 255);
+$color-purple-200: rgb(233 213 255);
+$color-purple-300: rgb(216 180 254);
+$color-purple-400: rgb(192 132 252);
+$color-purple-500: rgb(168 85 247);
+$color-purple-600: rgb(147 51 234);
+$color-purple-700: rgb(126 34 206);
+$color-purple-800: rgb(107 33 168);
+$color-purple-900: rgb(88 28 135);
+$color-fuchsia-50: rgb(253 244 255);
+$color-fuchsia-100: rgb(250 232 255);
+$color-fuchsia-200: rgb(245 208 254);
+$color-fuchsia-300: rgb(240 171 252);
+$color-fuchsia-400: rgb(232 121 249);
+$color-fuchsia-500: rgb(217 70 239);
+$color-fuchsia-600: rgb(192 38 211);
+$color-fuchsia-700: rgb(162 28 175);
+$color-fuchsia-800: rgb(134 25 143);
+$color-fuchsia-900: rgb(112 26 117);
+$color-pink-50: rgb(253 242 248);
+$color-pink-100: rgb(252 231 243);
+$color-pink-200: rgb(251 207 232);
+$color-pink-300: rgb(249 168 212);
+$color-pink-400: rgb(244 114 182);
+$color-pink-500: rgb(236 72 153);
+$color-pink-600: rgb(219 39 119);
+$color-pink-700: rgb(190 24 93);
+$color-pink-800: rgb(157 23 77);
+$color-pink-900: rgb(131 24 67);
+$color-rose-50: rgb(255 241 242);
+$color-rose-100: rgb(255 228 230);
+$color-rose-200: rgb(254 205 211);
+$color-rose-300: rgb(253 164 175);
+$color-rose-400: rgb(251 113 133);
+$color-rose-500: rgb(244 63 94);
+$color-rose-600: rgb(225 29 72);
+$color-rose-700: rgb(190 18 60);
+$color-rose-800: rgb(159 18 57);
+$color-rose-900: rgb(136 19 55);
+
+// border-radius
+$rounded-none: 0px;
+$rounded-sm: 0.125rem;
+$rounded: 0.25rem;
+$rounded-md: 0.375rem;
+$rounded-lg: 0.5rem;
+$rounded-xl: 0.75rem;
+$rounded-2xl: 1rem;
+$rounded-full: 9999px;
+
+// font width
+$font-thin: 100;
+$font-extralight: 200;
+$font-light: 300;
+$font-normal: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+$font-extrabold: 800;
+$font-black: 900;
+
+// font size
+$text-xs: 0.75rem;
+$text-sm: 0.875rem;
+$text-base: 1rem;
+$text-lg: 1.125rem;
+$text-xl: 1.25rem;
+$text-2xl: 1.5rem;
+$text-3xl: 1.875rem;
+$text-4xl: 2.25rem;
+$text-5xl: 3rem;
+$text-6xl: 3.75rem;
+$text-7xl: 4.5rem;
+$text-8xl: 6rem;
+$text-9xl: 8rem;
+
+// grid col
+$grid-cols-1: repeat(1, minmax(0, 1fr));
+$grid-cols-2: repeat(2, minmax(0, 1fr));
+$grid-cols-3: repeat(3, minmax(0, 1fr));
+$grid-cols-4: repeat(4, minmax(0, 1fr));
+$grid-cols-5: repeat(5, minmax(0, 1fr));
+$grid-cols-6: repeat(6, minmax(0, 1fr));
+$grid-cols-7: repeat(7, minmax(0, 1fr));
+$grid-cols-8: repeat(8, minmax(0, 1fr));
+$grid-cols-9: repeat(9, minmax(0, 1fr));
+$grid-cols-10: repeat(10, minmax(0, 1fr));
+$grid-cols-11: repeat(11, minmax(0, 1fr));
+$grid-cols-12: repeat(12, minmax(0, 1fr));
+$grid-cols-none: none;
+
+// width
+$size-1: 0.25rem; /* 4px */
+$size-2: 0.5rem; /* 8px */
+$size-3: 0.75rem; /* 12px */
+$size-4: 1rem; /* 16px */
+$size-5: 1.25rem; /* 20px */
+$size-6: 1.5rem; /* 24px */
+$size-7: 1.75rem; /* 28px */
+$size-8: 2rem; /* 32px */
+$size-9: 2.25rem; /* 36px */
+$size-10: 2.5rem; /* 40px */
+$size-11: 2.75rem; /* 44px */
+$size-12: 3rem; /* 48px */
+$size-14: 3.5rem; /* 56px */
+$size-16: 4rem; /* 64px */
+$size-20: 5rem; /* 80px */
+$size-24: 6rem; /* 96px */
+$size-28: 7rem; /* 112px */
+$size-32: 8rem; /* 128px */
+$size-36: 9rem; /* 144px */
+$size-40: 10rem; /* 160px */
+$size-44: 11rem; /* 176px */
+$size-48: 12rem; /* 192px */
+$size-52: 13rem; /* 208px */
+$size-56: 14rem; /* 224px */
+$size-60: 15rem; /* 240px */
+$size-64: 16rem; /* 256px */
+$size-72: 18rem; /* 288px */
+$size-80: 20rem; /* 320px */
+$size-96: 24rem; /* 384px */
+$size-auto: auto;
+$size-1-2: 50%;
+$size-1-3: 33.333333%;
+$size-2-3: 66.666667%;
+$size-1-4: 25%;
+$size-2-4: 50%;
+$size-3-4: 75%;
+$size-1-5: 20%;
+$size-2-5: 40%;
+$size-3-5: 60%;
+$size-4-5: 80%;
+$size-1-6: 16.666667%;
+$size-2-6: 33.333333%;
+$size-3-6: 50%;
+$size-4-6: 66.666667%;
+$size-5-6: 83.333333%;
+$size-1-12: 8.333333%;
+$size-2-12: 16.666667%;
+$size-3-12: 25%;
+$size-4-12: 33.333333%;
+$size-5-12: 41.666667%;
+$size-6-12: 50%;
+$size-7-12: 58.333333%;
+$size-8-12: 66.666667%;
+$size-9-12: 75%;
+$size-10-12: 83.333333%;
+$size-11-12: 91.666667%;
+$size-full: 100%;
+$size-screen: 100vw;
+$size-min: min-content;
+$size-max: max-content;
+$size-fit: fit-content;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: white;
+}
+
+.log-in {
+  border: 2px solid #cc9c3d;
+  padding: 10px 30px;
+  border-radius: $rounded-lg;
+  color: #7a8099;
+  font-size: text-xs;
+  font-weight: $font-medium;
+}
+
+.sign-up {
+  background-color: #cc9c3d;
+  padding: 10px 30px;
+  border-radius: $rounded-lg;
+  color: white;
+  font-size: text-xs;
+  font-weight: $font-medium;
+}
+
+section {
+  padding: 90px;
+
+  .devider {
+    border: 1px solid rgba(51, 51, 51, 0.2);
+    margin: 30px 0;
+  }
+
+  .about-txt {
+    font-family: $Philosopher;
+    font-size: $text-6xl;
+    font-weight: $font-semibold;
+    color: #332914;
+  }
+
+  .about-top {
+    display: grid;
+    grid-template-columns: $grid-cols-2;
+    gap: 3em;
+
+    .about-disc {
+      text-align: left;
+      color: $color-neutral-500;
+    }
+
+    .btn-group-top {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      button {
+        color: $color-neutral-600;
+        text-transform: capitalize;
+        border: 2px solid $color-neutral-400;
+        border-radius: $rounded-full;
+        padding: 0.125em 1em;
+        text-align: center;
+      }
+    }
+    .btn-group-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+      button {
+        color: $color-neutral-600;
+        text-transform: capitalize;
+        border: 2px solid $color-neutral-400;
+        border-radius: $rounded-full;
+        padding: 0.125em 1em;
+      }
+    }
+
+    .values {
+      margin-top: 70px;
+      h1 {
+        font-family: $Philosopher;
+        font-style: $text-3xl;
+        color: #332914;
+      }
+      .btn-group-down {
+        display: grid;
+        grid-template-columns: $grid-cols-5;
+        gap: 10px;
+        button {
+          color: $color-neutral-600;
+          text-transform: capitalize;
+          border: 2px solid $color-neutral-400;
+          border-radius: $rounded-full;
+          padding: 0.125em 1em;
+        }
+      }
+    }
+
+    .card-section-top {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+
+      .card-img {
+        img {
+          width: $size-full;
+          height: 156px;
+          object-fit: cover;
+          border-radius: $rounded-2xl;
+        }
+      }
+
+      .card-txt {
+        width: 40rem;
+        height: 156px;
+        padding: 20px;
+        background: linear-gradient(white, white) padding-box,
+          linear-gradient(to bottom, rgba(204, 156, 61, 1), rgba(51, 41, 20, 1))
+            border-box;
+        border-radius: $rounded-2xl;
+        border: 2px solid transparent;
+
+        h1 {
+          font-family: $Philosopher;
+          font-size: $text-2xl;
+          color: $color-neutral-600;
+        }
+        p {
+          font-size: $text-base;
+          color: $color-neutral-600;
+        }
+      }
+    }
+
+    .card-section-down {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      margin-top: 30px;
+
+      .card-img {
+        img {
+          width: $size-full;
+          height: 200px;
+          object-fit: cover;
+          border-radius: $rounded-2xl;
+        }
+      }
+
+      .card-txt {
+        width: 55rem;
+        height: 200px;
+        padding: 20px;
+        background: linear-gradient(white, white) padding-box,
+          linear-gradient(to bottom, rgba(204, 156, 61, 1), rgba(51, 41, 20, 1))
+            border-box;
+        border-radius: $rounded-2xl;
+        border: 2px solid transparent;
+
+        h1 {
+          font-family: $Philosopher;
+          font-size: $text-2xl;
+          color: $color-neutral-600;
+        }
+        p {
+          font-size: $text-base;
+          color: $color-neutral-600;
+        }
+      }
+    }
+  }
+
+  .journey {
+    margin-top: $size-32;
+    position: relative;
+
+    .shape {
+      position: absolute;
+      z-index: -10;
+   
+    }
+
+    h1 {
+      text-align: center;
+      font-family: $Philosopher;
+      font-size: $text-5xl;
+      color: $primary-color;
+    }
+    .video-img {
+      padding-top: 5em;
+      display: block;
+      margin: auto;
+      border-radius: $rounded-2xl;
+    }
+  }
+
+  .services {
+    margin-top: $size-32;
+    h1 {
+      font-family: $Philosopher;
+      color: $primary-color;
+      font-size: $text-4xl;
+      text-transform: capitalize;
+    }
+
+    .services-container {
+      display: grid;
+      grid-template-columns: $grid-cols-3;
+      gap: 30px;
+      h4 {
+        font-family: $Philosopher;
+        color: $primary-color;
+        font-size: $text-3xl;
+        text-transform: capitalize;
+      }
+
+      p {
+        margin-top: $size-3;
+        color: $color-neutral-500;
+      }
+    }
+  }
+
+  .customers {
+    margin-top: $size-20;
+    h1 {
+      font-family: $Philosopher;
+      color: $primary-color;
+      font-size: $text-4xl;
+      text-transform: capitalize;
+    }
+    p {
+      color: $color-neutral-600;
+    }
+  }
+}
+
+/* footer  */
+.footer {
+  background: #1a140a;
+  padding-bottom: 40px;
+}
+
+.footer-top {
+  border-bottom: 1px solid #666a80;
+}
+
+.footer-top-container {
+  max-width: 1260px;
+  margin: auto;
+  padding: 60px 0;
+  gap: 30px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #fff;
+}
+
+.footer-social-media {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-icon g {
+  opacity: 0.4;
+  transition: 0.3s;
+}
+
+.footer-icon:hover g {
+  opacity: 1;
+}
+
+.footer-bottom {
+  max-width: 1260px;
+  margin: auto;
+  padding-top: 30px;
+}
+
+.footer-bottom p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+
+.footer-bottom a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+  text-decoration-line: underline;
+  text-transform: capitalize;
+  color: #ffffff;
+  margin-left: 30px;
+}
+
+.footer-shape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+// media query mobile under 640 display
+@media (max-width: 640px) {
+  .log-in {
+    display: none;
+  }
+
+  .sign-up {
+    display: none;
+  }
+
+  section {
+    padding: 15px;
+
+    .about-txt {
+      text-align: center;
+      margin-top: $size-10;
+    }
+
+    .about-top {
+      display: grid;
+      grid-template-columns: $grid-cols-1;
+
+      .btn-group-top {
+        display: flex;
+        justify-content: center;
+      }
+
+      .btn-group-bottom {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+      }
+
+      .values {
+        margin-top: 30px;
+
+        .btn-group-down {
+          display: grid;
+          grid-template-columns: $grid-cols-2;
+        }
+      }
+      .card-section-top {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .card-section-down {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .card-txt {
+          height: $size-full;
+        }
+      }
+    }
+
+    .journey {
+      margin-top: $size-10;
+
+      .shape {
+        display: none;
+      }
+
+      .video-img {
+        padding-top: $size-5;
+        width: $size-full;
+      }
+    }
+
+    .services {
+      margin-top: $size-10;
+      .services-container {
+        display: grid;
+        grid-template-columns: $grid-cols-1;
+        gap: 10px;
+
+        p {
+          margin-top: $size-3;
+        }
+      }
+    }
+  }
+
+  .footer .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-top .footer-top-container {
+    flex-wrap: wrap;
+    white-space: nowrap;
+    justify-content: center !important;
+  }
+
+  .footer .footer-bottom {
+    flex-wrap: wrap;
+    justify-content: center !important;
+    gap: 30px;
+  }
+}
